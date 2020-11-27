@@ -1,5 +1,5 @@
-let hello = (nome: string) => {
-  console.log("Olá" + nome)
+let hello = (nome: string, lastname: string) => {
+  console.log("Olá" + nome + lastname)
 }
 
 hello("Gabriel")  
