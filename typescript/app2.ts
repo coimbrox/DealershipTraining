@@ -30,10 +30,33 @@ class Car {
 
 // instanciar obj
 
-let car1 = new Car('Veloster', 3)
-console.log(car1)
+// let car1 = new Car('Veloster', 3)
+// console.log(car1)
 
-//execute method
-car1.accelerate()
-console.log(car1)
+// //execute method
+// car1.accelerate()
+// console.log(car1)
 
+// create class dealership (concessionária)
+
+class Dealership {
+  private Address: string
+  private CarList: any
+
+  // constructor para instanciar objeto 
+
+  constructor(Address: string) {
+    this.Address = Address
+  }
+
+  public ProvideAddress(): string {
+    return this.Address
+  }
+
+  public ShowCarList(): any {
+    return this.CarList
+  }
+}
+
+let dealership = new Dealership("Rua Desembargador Wilde de Lima");
+console.log(dealership)

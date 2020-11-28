@@ -20,8 +20,24 @@ var Car = /** @class */ (function () {
     return Car;
 }());
 // instanciar obj
-var car1 = new Car('Veloster', 3);
-console.log(car1);
-//execute method
-car1.accelerate();
-console.log(car1);
+// let car1 = new Car('Veloster', 3)
+// console.log(car1)
+// //execute method
+// car1.accelerate()
+// console.log(car1)
+// create class dealership (concessionária)
+var Dealership = /** @class */ (function () {
+    // constructor para instanciar objeto 
+    function Dealership(Address) {
+        this.Address = Address;
+    }
+    Dealership.prototype.ProvideAddress = function () {
+        return this.Address;
+    };
+    Dealership.prototype.ShowCarList = function () {
+        return this.CarList;
+    };
+    return Dealership;
+}());
+var dealership = new Dealership("Rua Desembargador Wilde de Lima");
+console.log(dealership);
