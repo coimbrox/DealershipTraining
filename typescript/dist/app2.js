@@ -19,17 +19,12 @@ var Car = /** @class */ (function () {
     };
     return Car;
 }());
-// instanciar obj
-// let car1 = new Car('Veloster', 3)
-// console.log(car1)
-// //execute method
-// car1.accelerate()
-// console.log(car1)
 // create class dealership (concessionária)
 var Dealership = /** @class */ (function () {
     // constructor para instanciar objeto 
-    function Dealership(Address) {
+    function Dealership(Address, carList) {
         this.Address = Address;
+        this.CarList = CarList;
     }
     Dealership.prototype.ProvideAddress = function () {
         return this.Address;
@@ -39,8 +34,6 @@ var Dealership = /** @class */ (function () {
     };
     return Dealership;
 }());
-// let dealership = new Dealership("Rua Desembargador Wilde de Lima");
-// console.log(dealership)
 //create class person
 var Person = /** @class */ (function () {
     // create constructor
@@ -63,5 +56,18 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var person = new Person("Gabriel", "Masserati");
-console.log(person.SayFavoriteCar());
+/* --- Create Cars ---*/
+var car1 = new Car('Corsa', 4);
+var car2 = new Car('Celta', 4);
+var car3 = new Car('Uno', 2);
+/* --- Create Car List From Dealership--- */
+// poderia ser passado Array<Car> = [car1,car2,car3]
+var CarList = [
+    car1,
+    car2,
+    car3
+];
+// atribuir lista de carros a concessionária 
+var dealership = new Dealership('Mussurunga 2', CarList);
+/* -- show car list --*/
+console.log(dealership.ShowCarList());

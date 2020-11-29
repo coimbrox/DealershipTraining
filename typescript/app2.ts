@@ -28,38 +28,27 @@ class Car {
   }
 }
 
-// instanciar obj
-
-// let car1 = new Car('Veloster', 3)
-// console.log(car1)
-
-// //execute method
-// car1.accelerate()
-// console.log(car1)
-
 // create class dealership (concessionária)
 
 class Dealership {
   private Address: string
-  private CarList: any
+  private CarList: Array<Car>
 
   // constructor para instanciar objeto 
 
-  constructor(Address: string) {
+  constructor(Address: string, carList: Array<Car>) {
     this.Address = Address
+    this.CarList = CarList
   }
 
   public ProvideAddress(): string {
     return this.Address
   }
 
-  public ShowCarList(): any {
+  public ShowCarList(): Array<Car> {
     return this.CarList
   }
 }
-
-// let dealership = new Dealership("Rua Desembargador Wilde de Lima");
-// console.log(dealership)
 
 //create class person
 class Person {
@@ -91,6 +80,24 @@ class Person {
   }
 }
 
-let person = new Person("Gabriel", "Masserati")
-console.log(person.SayFavoriteCar())
+/* --- Create Cars ---*/
 
+let car1 = new Car('Corsa', 4)
+let car2 = new Car('Celta', 4)
+let car3 = new Car('Uno', 2)
+
+/* --- Create Car List From Dealership--- */
+// poderia ser passado Array<Car> = [car1,car2,car3]
+let CarList: Car[] = [
+  car1,
+  car2,
+  car3
+]
+
+// atribuir lista de carros a concessionária 
+
+let dealership = new Dealership('Mussurunga 2', CarList)
+
+
+/* -- show car list --*/
+console.log(dealership.ShowCarList())
