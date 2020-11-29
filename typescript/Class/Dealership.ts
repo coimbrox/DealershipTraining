@@ -7,7 +7,7 @@ export default class Dealership {
 
   // constructor para instanciar objeto 
 
-  constructor(Address: string, carList: Array<Car>) {
+  constructor(Address: string, CarList: Array<Car>) {
     this.Address = Address
     this.CarList = CarList
   }

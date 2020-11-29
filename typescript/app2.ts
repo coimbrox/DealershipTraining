@@ -1,8 +1,6 @@
-import Car from './Class/Car'
 import Person from './Class/Person'
+import Car from './Class/Car'
 import Dealership from './Class/Dealership'
-
-
 
 
 /* --- Create Cars ---*/

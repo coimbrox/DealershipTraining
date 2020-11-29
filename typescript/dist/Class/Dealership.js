@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Dealership = /** @class */ (function () {
     // constructor para instanciar objeto 
-    function Dealership(Address, carList) {
+    function Dealership(Address, CarList) {
         this.Address = Address;
         this.CarList = CarList;
     }

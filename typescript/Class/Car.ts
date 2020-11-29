@@ -9,7 +9,4 @@ export default class Car extends Vehicle {
     this.model = model
     this.numberOfDoors = numberOfDoors
   }
-
-
-
-
+}

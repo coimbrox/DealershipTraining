@@ -1,6 +1,6 @@
 export default class Vehicle {
-  protected model: string
   protected speed: number = 0
+  protected model: string
 
   // create methods whit functions
 
