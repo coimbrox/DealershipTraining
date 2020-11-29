@@ -17,15 +17,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var Vehicle_1 = __importDefault(require("./Vehicle"));
-var Car = /** @class */ (function (_super) {
-    __extends(Car, _super);
-    //construtor
-    function Car(model, numberOfDoors) {
-        var _this = _super.call(this) || this;
-        _this.model = model;
-        _this.numberOfDoors = numberOfDoors;
-        return _this;
+var Bike = /** @class */ (function (_super) {
+    __extends(Bike, _super);
+    function Bike() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    return Car;
+    return Bike;
 }(Vehicle_1.default));
-exports.default = Car;
+// exportando 
+exports.default = Bike;
