@@ -54,7 +54,8 @@ class Dealership {
 class Person {
   private Name: string
   private FavoriteCar: string
-  private Car: any
+  private Car: car
+
 
   // create constructor
   constructor(Name: string, FavoriteCar: string) {
@@ -71,11 +72,11 @@ class Person {
     return this.FavoriteCar
   }
 
-  public BuyCar(car: any): void {
+  public BuyCar(Car: Car): void {
     this.Car = Car
   }
 
-  public SayCarHave(): any {
+  public SayCarHave(): Car {
     return this.Car
   }
 }
@@ -100,4 +101,23 @@ let dealership = new Dealership('Mussurunga 2', CarList)
 
 
 /* -- show car list --*/
-console.log(dealership.ShowCarList())
+// console.log(dealership.ShowCarList())
+
+
+/** buy a car */
+
+let client = new Person('Volca', 'Corsa')
+
+dealership.ShowCarList().map((car: Car) => {
+
+  if (car['model'] == client.SayFavoriteCar()) {
+
+    // if true - buy car
+
+    client.BuyCar(car)
+
+  }
+
+})
+
+console.log(client.SayCarHave())

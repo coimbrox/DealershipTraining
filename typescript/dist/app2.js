@@ -48,7 +48,7 @@ var Person = /** @class */ (function () {
     Person.prototype.SayFavoriteCar = function () {
         return this.FavoriteCar;
     };
-    Person.prototype.BuyCar = function (car) {
+    Person.prototype.BuyCar = function (Car) {
         this.Car = Car;
     };
     Person.prototype.SayCarHave = function () {
@@ -70,4 +70,13 @@ var CarList = [
 // atribuir lista de carros a concessionária 
 var dealership = new Dealership('Mussurunga 2', CarList);
 /* -- show car list --*/
-console.log(dealership.ShowCarList());
+// console.log(dealership.ShowCarList())
+/** buy a car */
+var client = new Person('Volca', 'Corsa');
+dealership.ShowCarList().map(function (car) {
+    if (car['model'] == client.SayFavoriteCar()) {
+        // if true - buy car
+        client.BuyCar(car);
+    }
+});
+console.log(client.SayCarHave());
