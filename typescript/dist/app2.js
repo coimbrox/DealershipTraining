@@ -39,5 +39,29 @@ var Dealership = /** @class */ (function () {
     };
     return Dealership;
 }());
-var dealership = new Dealership("Rua Desembargador Wilde de Lima");
-console.log(dealership);
+// let dealership = new Dealership("Rua Desembargador Wilde de Lima");
+// console.log(dealership)
+//create class person
+var Person = /** @class */ (function () {
+    // create constructor
+    function Person(Name, FavoriteCar) {
+        this.Name = Name;
+        this.FavoriteCar = FavoriteCar;
+    }
+    // create methods
+    Person.prototype.SayName = function () {
+        return this.Name;
+    };
+    Person.prototype.SayFavoriteCar = function () {
+        return this.FavoriteCar;
+    };
+    Person.prototype.BuyCar = function (car) {
+        this.Car = Car;
+    };
+    Person.prototype.SayCarHave = function () {
+        return this.Car;
+    };
+    return Person;
+}());
+var person = new Person("Gabriel", "Masserati");
+console.log(person.SayFavoriteCar());

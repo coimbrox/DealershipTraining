@@ -58,5 +58,39 @@ class Dealership {
   }
 }
 
-let dealership = new Dealership("Rua Desembargador Wilde de Lima");
-console.log(dealership)
+// let dealership = new Dealership("Rua Desembargador Wilde de Lima");
+// console.log(dealership)
+
+//create class person
+class Person {
+  private Name: string
+  private FavoriteCar: string
+  private Car: any
+
+  // create constructor
+  constructor(Name: string, FavoriteCar: string) {
+    this.Name = Name
+    this.FavoriteCar = FavoriteCar
+  }
+
+  // create methods
+  public SayName(): string {
+    return this.Name
+  }
+
+  public SayFavoriteCar(): string {
+    return this.FavoriteCar
+  }
+
+  public BuyCar(car: any): void {
+    this.Car = Car
+  }
+
+  public SayCarHave(): any {
+    return this.Car
+  }
+}
+
+let person = new Person("Gabriel", "Masserati")
+console.log(person.SayFavoriteCar())
+
