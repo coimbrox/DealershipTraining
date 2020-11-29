@@ -1,65 +1,15 @@
 "use strict";
-// create class Car
-var Car = /** @class */ (function () {
-    //construtor
-    function Car(model, numberOfDoors) {
-        this.speed = 0;
-        this.model = model;
-        this.numberOfDoors = numberOfDoors;
-    }
-    // create methods whit functions
-    Car.prototype.accelerate = function () {
-        this.speed = this.speed + 10;
-    };
-    Car.prototype.stop = function () {
-        this.speed = 0;
-    };
-    Car.prototype.currentSpeed = function () {
-        return this.speed;
-    };
-    return Car;
-}());
-// create class dealership (concessionária)
-var Dealership = /** @class */ (function () {
-    // constructor para instanciar objeto 
-    function Dealership(Address, carList) {
-        this.Address = Address;
-        this.CarList = CarList;
-    }
-    Dealership.prototype.ProvideAddress = function () {
-        return this.Address;
-    };
-    Dealership.prototype.ShowCarList = function () {
-        return this.CarList;
-    };
-    return Dealership;
-}());
-//create class person
-var Person = /** @class */ (function () {
-    // create constructor
-    function Person(Name, FavoriteCar) {
-        this.Name = Name;
-        this.FavoriteCar = FavoriteCar;
-    }
-    // create methods
-    Person.prototype.SayName = function () {
-        return this.Name;
-    };
-    Person.prototype.SayFavoriteCar = function () {
-        return this.FavoriteCar;
-    };
-    Person.prototype.BuyCar = function (Car) {
-        this.Car = Car;
-    };
-    Person.prototype.SayCarHave = function () {
-        return this.Car;
-    };
-    return Person;
-}());
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var Car_1 = __importDefault(require("./Class/Car"));
+var Person_1 = __importDefault(require("./Class/Person"));
+var Dealership_1 = __importDefault(require("./Class/Dealership"));
 /* --- Create Cars ---*/
-var car1 = new Car('Corsa', 4);
-var car2 = new Car('Celta', 4);
-var car3 = new Car('Uno', 2);
+var car1 = new Car_1.default('Corsa', 4);
+var car2 = new Car_1.default('Celta', 4);
+var car3 = new Car_1.default('Uno', 2);
 /* --- Create Car List From Dealership--- */
 // poderia ser passado Array<Car> = [car1,car2,car3]
 var CarList = [
@@ -68,11 +18,11 @@ var CarList = [
     car3
 ];
 // atribuir lista de carros a concessionária 
-var dealership = new Dealership('Mussurunga 2', CarList);
+var dealership = new Dealership_1.default('Mussurunga 2', CarList);
 /* -- show car list --*/
 // console.log(dealership.ShowCarList())
 /** buy a car */
-var client = new Person('Volca', 'Corsa');
+var client = new Person_1.default('Volca', 'Corsa');
 dealership.ShowCarList().map(function (car) {
     if (car['model'] == client.SayFavoriteCar()) {
         // if true - buy car

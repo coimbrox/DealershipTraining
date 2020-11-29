@@ -1,85 +1,9 @@
-// create class Car
-class Car {
-  private model: string
-  private numberOfDoors: number
-  private speed: number = 0
-
-  //construtor
-
-  constructor(model: string, numberOfDoors: number) {
-    this.model = model
-    this.numberOfDoors = numberOfDoors
-  }
+import Car from './Class/Car'
+import Person from './Class/Person'
+import Dealership from './Class/Dealership'
 
 
-  // create methods whit functions
 
-  public accelerate(): void {
-    this.speed = this.speed + 10
-
-  }
-
-  public stop(): void {
-    this.speed = 0
-  }
-
-  public currentSpeed(): number {
-    return this.speed
-  }
-}
-
-// create class dealership (concessionária)
-
-class Dealership {
-  private Address: string
-  private CarList: Array<Car>
-
-  // constructor para instanciar objeto 
-
-  constructor(Address: string, carList: Array<Car>) {
-    this.Address = Address
-    this.CarList = CarList
-  }
-
-  public ProvideAddress(): string {
-    return this.Address
-  }
-
-  public ShowCarList(): Array<Car> {
-    return this.CarList
-  }
-}
-
-//create class person
-class Person {
-  private Name: string
-  private FavoriteCar: string
-  private Car: car
-
-
-  // create constructor
-  constructor(Name: string, FavoriteCar: string) {
-    this.Name = Name
-    this.FavoriteCar = FavoriteCar
-  }
-
-  // create methods
-  public SayName(): string {
-    return this.Name
-  }
-
-  public SayFavoriteCar(): string {
-    return this.FavoriteCar
-  }
-
-  public BuyCar(Car: Car): void {
-    this.Car = Car
-  }
-
-  public SayCarHave(): Car {
-    return this.Car
-  }
-}
 
 /* --- Create Cars ---*/
 
