@@ -22,6 +22,9 @@ var Bike = /** @class */ (function (_super) {
     function Bike() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Bike.prototype.accelerate = function () {
+        this.speed = this.speed + 20;
+    };
     return Bike;
 }(Vehicle_1.default));
 // exportando 
