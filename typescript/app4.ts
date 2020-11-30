@@ -1,36 +1,36 @@
-import { DaoDealership } from './DaoDealership'
+import { Dao } from './Dao'
+
+// import { DaoDealership } from './DaoDealership'
 import Dealership from './Class/Dealership'
 
-import { DaoPerson } from './DaoPerson'
+// import { DaoPerson } from './DaoPerson'
 import Person from './Class/Person'
 
-import { DaoCar } from './DaoCar'
+// import { DaoCar } from './DaoCar'
 import Car from './Class/Car'
 
-import { DaoBike } from './DaoBike'
+// import { DaoBike } from './DaoBike'
 import Bike from './Class/Bike'
 
 
 //Dealership
-let dao: DaoDealership = new DaoDealership()
+// let dao: DaoDealership = new DaoDealership()
 let dealership = new Dealership('', [])
 
-dao.insert(dealership);
-
 // Person
-let dao2: DaoPerson = new DaoPerson()
+// let dao2: DaoPerson = new DaoPerson()
 let person = new Person('', '')
 
-dao2.update(person)
-
 // Car
-let dao3: DaoCar = new DaoCar()
+// let dao3: DaoCar = new DaoCar()
 let car = new Car('', 4)
 
-dao2.remove(car)
-
 // Bike
-let dao4: DaoBike = new DaoBike()
+// let dao4: DaoBike = new DaoBike()
 let bike = new Bike()
 
-dao2.select(bike)
+let dao5: Dao<Dealership> = new Dao<Dealership>()
+let dao6: Dao<Person> = new Dao<Person>()
+
+dao5.insert(Dealership)
+dao6.remove(5)

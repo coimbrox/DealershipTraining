@@ -3,27 +3,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var DaoDealership_1 = require("./DaoDealership");
+var Dao_1 = require("./Dao");
+// import { DaoDealership } from './DaoDealership'
 var Dealership_1 = __importDefault(require("./Class/Dealership"));
-var DaoPerson_1 = require("./DaoPerson");
+// import { DaoPerson } from './DaoPerson'
 var Person_1 = __importDefault(require("./Class/Person"));
-var DaoCar_1 = require("./DaoCar");
+// import { DaoCar } from './DaoCar'
 var Car_1 = __importDefault(require("./Class/Car"));
-var DaoBike_1 = require("./DaoBike");
+// import { DaoBike } from './DaoBike'
 var Bike_1 = __importDefault(require("./Class/Bike"));
 //Dealership
-var dao = new DaoDealership_1.DaoDealership();
+// let dao: DaoDealership = new DaoDealership()
 var dealership = new Dealership_1.default('', []);
-dao.insert(dealership);
 // Person
-var dao2 = new DaoPerson_1.DaoPerson();
+// let dao2: DaoPerson = new DaoPerson()
 var person = new Person_1.default('', '');
-dao2.update(person);
 // Car
-var dao3 = new DaoCar_1.DaoCar();
+// let dao3: DaoCar = new DaoCar()
 var car = new Car_1.default('', 4);
-dao2.remove(car);
 // Bike
-var dao4 = new DaoBike_1.DaoBike();
+// let dao4: DaoBike = new DaoBike()
 var bike = new Bike_1.default();
-dao2.select(bike);
+var dao5 = new Dao_1.Dao();
+var dao6 = new Dao_1.Dao();
+dao5.insert(Dealership_1.default);
+dao6.remove(5);
