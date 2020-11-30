@@ -1,7 +1,8 @@
+import { DealershipInterface } from './DealershipInterface'
 import Car from './Car'
 
 
-export default class Dealership {
+export default class Dealership implements DealershipInterface {
   private Address: string
   private CarList: Array<Car>
 
@@ -19,4 +20,9 @@ export default class Dealership {
   public ShowCarList(): Array<Car> {
     return this.CarList
   }
+
+  public openingHours(): string {
+    return 'Segunda a Sexta das 08:00 as 18:00 e aos Sábados das 08:00 as 12:00'
+  }
+
 }

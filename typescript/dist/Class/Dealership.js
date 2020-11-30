@@ -12,6 +12,9 @@ var Dealership = /** @class */ (function () {
     Dealership.prototype.ShowCarList = function () {
         return this.CarList;
     };
+    Dealership.prototype.openingHours = function () {
+        return 'Segunda a Sexta das 08:00 as 18:00 e aos Sábados das 08:00 as 12:00';
+    };
     return Dealership;
 }());
 exports.default = Dealership;
